@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHandsTrackingUsageDescription</key>
+	<string>The app requires this so your hands can interact with your environment.</string>
+	<key>NSWorldSensingUsageDescription</key>
+	<string>The app requires this so it can extract mesh info from your surroundings.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationPreferredDefaultSceneSessionRole</key>

@@ -5,29 +5,31 @@
 //  Created by weng chong lao on 20/10/2024.
 //
 
+import OSLog
 import SwiftUI
+
 
 @main
 struct ObjectExtractorApp: App {
-
-    @State private var appModel = AppModel()
-
+    @State private var viewModel = ExtractorImmersiveViewModel()
+    
+    @MainActor init() {}
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(appModel)
+            InitialisationView()
+        }
+        
+        WindowGroup(id: "error") {
+            Text("An error occurred; check the app's logs for details.")
         }
 
-        ImmersiveSpace(id: appModel.immersiveSpaceID) {
-            ImmersiveView()
-                .environment(appModel)
-                .onAppear {
-                    appModel.immersiveSpaceState = .open
-                }
-                .onDisappear {
-                    appModel.immersiveSpaceState = .closed
-                }
+        ImmersiveSpace(id: ExtractorImmersiveViewID) {
+            ExtractorImmersiveView()
+                .environment(viewModel)
         }
-        .immersionStyle(selection: .constant(.mixed), in: .mixed)
-     }
+    }
 }
+
+@MainActor
+let logger = Logger(subsystem: "com.apple-samplecode.SceneReconstructionExample", category: "general")
