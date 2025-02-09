@@ -2,6 +2,10 @@
 
 Object Extractor Prototype is an immersive application designed for visionOS, leveraging RealityKit to provide object extraction and AR functionalities. This project is developed in Swift using the MVVM architecture and SwiftUI, and is designed specifically for the Apple Vision Pro, a Mixed Reality (MR) device.
 
+## Demonstration
+
+https://github.com/user-attachments/assets/f4efdb9e-2072-4bcd-827b-c2655087d1f8
+
 ## Features
 - **Object Detection and Extraction**: Capture and interact with virtual objects in an immersive environment.
 - **3D Model Generation**: Leverages the advanced sensors and capabilities of the Apple Vision Pro to capture detailed 3D mesh data of real-world objects, convert them into editable 3D models, and prepare them for later use in immersive environments.
