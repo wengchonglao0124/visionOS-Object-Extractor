@@ -40,7 +40,7 @@ ObjectExtractor/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/wengchonglao0124/visionOS-Object-Extractor.git
    ```
 
 2. Open the project in Xcode:
